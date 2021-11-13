@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# specific folders / files to be ignored
+/data
+
+# Pycharm .idea
+/.idea

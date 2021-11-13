@@ -2,7 +2,7 @@ from enum import IntEnum, auto
 from typing import Dict, Tuple, List, Optional, ClassVar, Union
 from pyubx2 import UBXMessage
 from logging import getLogger
-from pyubx2.pyubx_nav_msg_decoder.gnss_nav_message import \
+from src.messages.gnss_nav_message import \
     GnssNavMsgType, \
     GnssSvidType, \
     GnssNavMsgId, \
@@ -17,11 +17,11 @@ from pyubx2.pyubx_nav_msg_decoder.gnss_nav_message import \
     NavMsgError, \
     UuidType
 
-from pyubx2.pyubx_nav_msg_decoder.int_bit_manipulator import \
+from src.utility.int_bit_manipulator import \
     shift_mask_int, \
     int_append_int
 
-from pyubx2.pyubx_nav_msg_decoder.ubx_base_types import \
+from src.receivers.ubx_base_types import \
     UbxGnssId, \
     UbxSignalId, \
     UbxTypeSvid

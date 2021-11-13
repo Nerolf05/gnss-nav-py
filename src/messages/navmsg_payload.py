@@ -1,18 +1,5 @@
-from typing import Optional, Dict
-from dataclasses import dataclass
-
-
-@dataclass(frozen=True)
-class MsgItem:
-    """Base type to define navigation message payload"""
-    start: int
-    len_: int
-    two_comp: bool = False  # two complement - used for GPS/Gal/BDS
-    signed_bin: bool = False  # signed binary used for Glonass to check highest bit for sign
-    scale: Optional[float] = None
-
-    def __post_init__(self):
-        assert (self.two_comp and self.signed_bin) is False, "2-comp or signed_binary - Only one is allowed to be set"
+from typing import Dict
+from src.structures.msg_item import MsgItem
 
 
 NAV_SCALE = {f"S2_{str(x).zfill(2)}": 2 ** x for x in range(-68, 66)}  # scale dict of base 2

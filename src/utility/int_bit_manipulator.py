@@ -1,6 +1,6 @@
 from typing import Optional
-from .
-from pyubx2.pyubx_nav_msg_decoder.navmsg_payload import MsgItem
+
+from src.messages.navmsg_payload import MsgItem
 
 
 def shift_mask_int(int_: int, r_shift: int, l_shift: int = 0, bits_oi: int = 0) -> int:

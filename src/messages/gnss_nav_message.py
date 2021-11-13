@@ -3,12 +3,12 @@ from abc import ABCMeta, abstractmethod, ABC
 from enum import IntEnum
 from typing import List, Dict, Optional, Any, Tuple, ClassVar, Set, Sequence
 
-from pyubx2.pyubx_nav_msg_decoder.int_bit_manipulator import  \
+from src.utility.int_bit_manipulator import  \
         shift_mask_int, \
         decode_msg_item, \
         int_append_int
-from pyubx2.pyubx_nav_msg_decoder.navmsg_payload import\
-    MsgItem,\
+from src.structures.msg_item import MsgItem
+from src.messages.navmsg_payload import\
     Payload_GPS_CNAV, \
     Payload_GPS_LNAV, \
     Payload_GPS_CNAV_RED_ALM, \
@@ -20,8 +20,8 @@ from pyubx2.pyubx_nav_msg_decoder.navmsg_payload import\
     Payload_BDS_D1_NAV, \
     PayloadBaseType
 
-from pyubx2.pyubx_nav_msg_decoder.ubx_base_types import GnssId
-from pyubx2.pyubx_nav_msg_decoder.gnss_ephemeris import \
+from src.structures.gnss_base_basetypes import GnssId
+from src.structures.gnss_ephemeris import \
     BaseEphemeris, \
     GlonassEphemeris, \
     LNavGpsEphemeris, \
@@ -29,7 +29,7 @@ from pyubx2.pyubx_nav_msg_decoder.gnss_ephemeris import \
     GalileoEphemeris, \
     BdsEphemeris
 
-from pyubx2.pyubx_nav_msg_decoder.gnss_almanac import \
+from src.structures.gnss_almanac import \
     BaseAlmanac, \
     GpsAlmanac, \
     GalileoAlmanac, \

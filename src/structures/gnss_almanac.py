@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from numbers import Number
 from typing import Optional, ClassVar, Dict
 
-from pyubx2.pyubx_nav_msg_decoder.ubx_base_types import GnssId
+from src.structures.gnss_base_basetypes import GnssId
 
 
 @dataclass(frozen=False)

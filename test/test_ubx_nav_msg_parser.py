@@ -3,9 +3,7 @@ from logging import getLogger
 from collections import namedtuple
 import warnings
 
-import pytest
-
-from pyubx2.pyubx_nav_msg_decoder.ubx_nav_message_parser import UbxNavMessageParserHandle
+from src.ubx_nav_message_parser import UbxNavMessageParserHandle
 from pyubx2.ubxreader import UBXReader
 from pyubx2.exceptions import UBXMessageError, UBXParseError
 
@@ -57,4 +55,6 @@ def test_gnss_nav_msg_offline(ubx_offline_config):
 
 if __name__ == '__main__':
     test_gnss_nav_msg_offline(gps_cfg)
+    test_gnss_nav_msg_offline(gal_cfg)
+    test_gnss_nav_msg_offline(glo_cfg)
     pass

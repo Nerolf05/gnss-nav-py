@@ -12,8 +12,6 @@ The plan of this module for the upcoming months will be to implement the followi
 - for every gnss-receiver supporting raw-nav data output
 - Rinex-nav data export 
 
-Since I have recently started with my thesis, I will unfortunately not have time to implement the project the upcoming months. The plan would be to finish a first draft in mid 2022 (July).
-Finally i received my orderd receiver :)
-
+Starting to work again on the project
 
 Contributions are welcome :)
